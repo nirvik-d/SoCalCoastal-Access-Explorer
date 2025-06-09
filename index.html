@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="initial-scale=1,maximum-scale=1,user-scalable=no"
+    />
+    <title>SoCal Coastal Access Explorer</title>
+
+    <!-- Load Calcite components from CDN -->
+    <script
+      type="module"
+      src="https://js.arcgis.com/calcite-components/3.0.3/calcite.esm.js"
+    ></script>
+
+    <!-- Load the ArcGIS Maps SDK for JavaScript from CDN -->
+    <link
+      rel="stylesheet"
+      href="https://js.arcgis.com/4.32/esri/themes/light/main.css"
+    />
+    <script src="https://js.arcgis.com/4.32/"></script>
+
+    <!-- Load Map components from CDN-->
+    <script
+      type="module"
+      src="https://js.arcgis.com/map-components/4.32/arcgis-map-components.esm.js"
+    ></script>
+
+    <!-- Load local styles -->
+    <link rel="stylesheet" href="src/style.css" />
+  </head>
+  <body>
+    <calcite-shell>
+      <calcite-panel class="map-panel">
+        <arcgis-map
+          basemap="topo-vector"
+          center="-118.4912, 34.0194"
+          zoom="8.5"
+        >
+          <arcgis-zoom position="top-left"></arcgis-zoom>
+          <arcgis-expand position="top-left">
+            <arcgis-legend></arcgis-legend>
+          </arcgis-expand>
+          <arcgis-expand position="top-left">
+            <arcgis-basemap-gallery></arcgis-basemap-gallery>
+          </arcgis-expand>
+        </arcgis-map>
+        <div id="selection-menu">
+          <calcite-select
+            label="Filter by Type"
+            placeholder="All Types"
+          >
+            <calcite-option value="All Beach Access Types">All Beach Access Types</calcite-option>
+            <calcite-option value="Beach Access">Beach Access</calcite-option>
+            <calcite-option value="Natural Resource"
+              >Natural Resource</calcite-option
+            >
+            <calcite-option value="Visual Access">Visual Access</calcite-option>
+            <calcite-option value="Historic/Cultural Site"
+              >Historic/Cultural Site</calcite-option
+            >
+            <calcite-option value="Boat Access">Boat Access</calcite-option>
+            <calcite-option value="Campground">Campground</calcite-option>
+            <calcite-option value="Park">Park</calcite-option>
+            <calcite-option value="Pier">Pier</calcite-option>
+            <calcite-option value="LCOA">LCOA</calcite-option>
+            <calcite-option value="CITY/TOWN">CITY/TOWN</calcite-option>
+            <calcite-option value="Lighthouse">Lighthouse</calcite-option>
+            <calcite-option value="No Access">No Access</calcite-option>
+            <calcite-option value="lost access">Lost Access</calcite-option>
+            <calcite-option value="PIER/WHARF">PIER/WHARF</calcite-option>
+            <calcite-option value="Reacreational Facility"
+              >Reacreational Facility</calcite-option
+            >
+            <calcite-option value="MPA">MPA</calcite-option>
+            <calcite-option value="Other Natural Recreation"
+              >Other Natural Recreation</calcite-option
+            >
+          </calcite-select>
+        </div>
+      </calcite-panel>
+
+      <calcite-panel class="table-panel">
+        <calcite-input id="accessSearch" placeholder="Search access points..." clearable icon="search"></calcite-input>
+        <arcgis-feature-table
+          reference-element="arcgis-map"
+          show-layer-dropdown
+          related-records-enabled
+        ></arcgis-feature-table>
+      </calcite-panel>
+    </calcite-shell>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
