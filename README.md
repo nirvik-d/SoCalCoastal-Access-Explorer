@@ -2,21 +2,41 @@
 
 A JavaScript application using ArcGIS Maps SDK for JavaScript and Calcite Web Components, showing coastal access points in Southern California with type-based filtering and real-time search.
 
+## Features
+
+* **Interactive Map:** Displays coastal access points across Southern California using the ArcGIS Maps SDK for JavaScript.
+* **Type-Based Filtering:** Filter access points by categories such as "Beach Access," "Natural Resource," etc., using Calcite Select components.
+* **Real-time Search:** Instantly search access points by name or type using a dynamic input field.
+* **Dynamic Feature Table:** Displays a sortable and filterable table of access points, integrated with the map view using `arcgis-feature-table`.
+* **Location Details:** Pop-up windows provide detailed information for each access point on the map.
+* **Southern California Focus:** Filters access points specifically to Los Angeles, Orange, San Diego, Santa Barbara, Ventura, and San Luis Obispo counties.
+
+## Screenshots
+
+*1. Main application*
+
+<img width="959" alt="image" src="https://github.com/user-attachments/assets/acac1cf2-b787-49c9-8135-f6fa045f674e" />
+
+*2. Display all the beach access points in Laguna Beach.*
+
+<img width="959" alt="image" src="https://github.com/user-attachments/assets/1e737596-7568-4b00-a4a9-267339b46954" />
+
 ## Project Setup
 
-1. **Initialize Project**
+1.  **Initialize Project**
 
-   ```bash
-   # Create a new Vite project
-   npm create vite@latest
-   ```
+    ```bash
+    # Create a new Vite project
+    npm create vite@latest
+    ```
 
-   Follow the instructions on screen to initialize the project.
+    Follow the instructions on screen to initialize the project.
 
-2. **Install Dependencies**
-   ```bash
-   npm install
-   ```
+2.  **Install Dependencies**
+
+    ```bash
+    npm install
+    ```
 
 ## Code Structure
 
@@ -38,16 +58,16 @@ The HTML file sets up the basic structure for the ArcGIS web application:
 
     <link
       rel="stylesheet"
-      href="https://js.arcgis.com/4.32/esri/themes/light/main.css"
+      href="[https://js.arcgis.com/4.32/esri/themes/light/main.css](https://js.arcgis.com/4.32/esri/themes/light/main.css)"
     />
-    <script src="https://js.arcgis.com/4.32/"></script>
+    <script src="[https://js.arcgis.com/4.32/](https://js.arcgis.com/4.32/)"></script>
     <script
       type="module"
-      src="https://js.arcgis.com/calcite-components/3.0.3/calcite.esm.js"
+      src="[https://js.arcgis.com/calcite-components/3.0.3/calcite.esm.js](https://js.arcgis.com/calcite-components/3.0.3/calcite.esm.js)"
     ></script>
     <script
       type="module"
-      src="https://js.arcgis.com/map-components/4.32/arcgis-map-components.esm.js"
+      src="[https://js.arcgis.com/map-components/4.32/arcgis-map-components.esm.js](https://js.arcgis.com/map-components/4.32/arcgis-map-components.esm.js)"
     ></script>
 
     <link rel="stylesheet" href="./src/style.css" />
@@ -79,8 +99,7 @@ The HTML file sets up the basic structure for the ArcGIS web application:
             <calcite-option value="Natural Resource"
               >Natural Resource</calcite-option
             >
-            <!-- More options... -->
-          </calcite-select>
+            </calcite-select>
         </div>
       </calcite-panel>
 
