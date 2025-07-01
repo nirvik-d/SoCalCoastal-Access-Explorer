@@ -21,6 +21,11 @@ A JavaScript application using ArcGIS Maps SDK for JavaScript and Calcite Web Co
 
 <img width="959" alt="image" src="https://github.com/user-attachments/assets/1e737596-7568-4b00-a4a9-267339b46954" />
 
+## Prerequisites
+
+* Node.js
+* Vite
+
 ## Project Setup
 
 1.  **Initialize Project**
@@ -58,16 +63,16 @@ The HTML file sets up the basic structure for the ArcGIS web application:
 
     <link
       rel="stylesheet"
-      href="[https://js.arcgis.com/4.32/esri/themes/light/main.css](https://js.arcgis.com/4.32/esri/themes/light/main.css)"
+      href="https://js.arcgis.com/4.32/esri/themes/light/main.css"
     />
-    <script src="[https://js.arcgis.com/4.32/](https://js.arcgis.com/4.32/)"></script>
+    <script src="https://js.arcgis.com/4.32/"></script>
     <script
       type="module"
-      src="[https://js.arcgis.com/calcite-components/3.0.3/calcite.esm.js](https://js.arcgis.com/calcite-components/3.0.3/calcite.esm.js)"
+      src="https://js.arcgis.com/calcite-components/3.0.3/calcite.esm.js"
     ></script>
     <script
       type="module"
-      src="[https://js.arcgis.com/map-components/4.32/arcgis-map-components.esm.js](https://js.arcgis.com/map-components/4.32/arcgis-map-components.esm.js)"
+      src="https://js.arcgis.com/map-components/4.32/arcgis-map-components.esm.js"
     ></script>
 
     <link rel="stylesheet" href="./src/style.css" />
@@ -361,3 +366,41 @@ function updateDefinitionExpression() {
    ```bash
    npm run build
    ```
+
+## Usage
+
+1. **View Coastal Access Points**
+   - Open the application in your web browser
+   - The map will automatically load with all coastal access points in Southern California
+   - Use the zoom controls or mouse wheel to zoom in/out
+   - Click and drag to pan the map
+
+2. **Filter Access Points by Type**
+   - Use the dropdown menu to select a specific type of access point
+   - Available categories include:
+     - Beach Access
+     - Natural Resource
+     - And more...
+   - Selected type will be highlighted on the map
+   - The feature table will update to show only matching points
+
+3. **Search for Specific Points**
+   - Use the search bar to find specific access points
+   - Type in the name or type of access point
+   - Results will update in real-time as you type
+   - Matching points will be highlighted on the map
+
+4. **View Detailed Information**
+   - Click on any access point on the map to open its popup
+   - The popup displays detailed information about the access point
+   - Information includes:
+     - Name
+     - Type
+     - Location details
+     - Additional relevant information
+
+5. **Use the Feature Table**
+   - The table below the map shows all access points
+   - Columns can be sorted by clicking on the headers
+   - Use the table filters to narrow down results
+   - Click on any row to highlight the corresponding point on the map
